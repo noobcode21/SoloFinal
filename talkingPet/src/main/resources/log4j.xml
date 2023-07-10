@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<!-- console -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH시 mm분 ss초}] %-5p: %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- file -->
+	<appender name="fa" class="org.apache.log4j.FileAppender">
+		<param name="file" value="D://dev//log//LogFile.log" /> <!-- 경로 -->
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH시 mm분 ss초}] %-5p: %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- Root Logger -->
+	<root>
+		<priority value="wran" />
+		<appender-ref ref="fa" /> <!-- 이거 변경하면 다르게 됨. console 혹은 fa -->
+		<appender-ref ref="console" /> <!-- 두 개 혹은 여러 개를 보고 싶다면 이것처럼 추가 -->
+	</root>
+	
+</log4j:configuration>
