@@ -4,7 +4,6 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.kh</groupId>
 	<artifactId>app</artifactId>
-	<name>플젝이름ㅁ</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -254,4 +253,5 @@
             </plugin>
         </plugins>
     </build>
+    <name>talkingpet</name>
 </project>
