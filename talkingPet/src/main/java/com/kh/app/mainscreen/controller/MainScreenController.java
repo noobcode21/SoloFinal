@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class MainScreenController {
 
 	@GetMapping("mainscreen")
-	public String home() {
+	public String mainScreen() {
 		return "mainscreen";
 	}
 	
