@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("main")
 public class MainScreenController {
 
-	@GetMapping("mainscreen")
+	@GetMapping("screen")
 	public String mainScreen() {
 		return "mainscreen";
 	}
+	
 	
 	
 	
