@@ -28,7 +28,7 @@ a {
 	background-color: #FFFAF0;
 	border-radius : 14px;
 	display: grid;
-	grid-template-rows: 2fr 2fr 1fr;	
+	grid-template-rows: 1fr 2fr;	
 }
 
 .logoarea{
@@ -36,15 +36,10 @@ a {
 	justify-content: center;
 	align-items: center;
 }
-.loginarea{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
 .joinarea{
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 }
 .submitarea{
 	display: flex;
@@ -54,7 +49,7 @@ a {
 .formarea{
 	display: grid;
 	grid-template-columns : 2fr 5fr;
-	grid-template-rows : 1fr 1fr 1fr;
+	grid-template-rows : 1fr 1fr 1fr 1fr 1fr 1fr;
 	justify-content: center;
 	align-items: center;
 	padding: 15px;
@@ -78,7 +73,25 @@ a {
 	align-items: center;
 	padding: 5px;
 }
+.emailinput{
+	width: 225px;
+	height: 25px;	
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
 .pwdinput{
+	width: 225px;
+	height: 25px;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+.checkpwd{
 	width: 225px;
 	height: 25px;
 	border-radius: 25px;
@@ -110,15 +123,57 @@ a {
 	font: bold;
 	font-size: 20px;
 }
+.emailword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: bold;
+	font-size: 20px;
+}
+.emailword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: bold;
+	font-size: 20px;
+}
+.pwdcheckword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: bold;
+	font-size: 15px;
+}
 
 .idarea{
-	padding: 15px;	
+	padding-top: 35px;
+	padding-bottom: 35px;	
+	padding-right: 15px;
+	padding-left: 15px;
 }
 .pwdarea{
-	padding: 15px;	
+	padding-top: 35px;
+	padding-bottom: 35px;	
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.pwdcheckarea{
+	padding-top: 35px;
+	padding-bottom: 35px;	
+	padding-right: 15px;
+	padding-left: 15px;
 }
 .submitarea{
-	padding: 15px;	
+	padding-top: 35px;
+	padding-bottom: 35px;	
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.emailarea{
+	padding-top: 35px;
+	padding-bottom: 35px;	
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .logoimg{
@@ -126,49 +181,12 @@ a {
 	height: 400px;
 }
 
-.joinareaword{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font: bold;
-	font-size: 18px;
-	width: 100%;
-	height: 50px;
+.confirmjoin{
+	width: 125px;
+	height: 35px;
+	border-radius: 25px;
+	
 }
 
-.join{
-	color: orange;
-	margin-bottom: 250px;
-	width: 90%;
-	height: 35px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 25px;
-	background-color: white; 
-	border-color: orange;
-	border-style: inset;
-}
-.seek{
-	color: orange;
-	margin-bottom: 250px;
-	width: 90%;
-	height: 35px;
-	display: flex;
-	align-items: center;
-	justify-content: center;	
-	border-radius: 25px;
-	background-color: white; 
-	border-color: orange;
-	border-style: inset;
-}
-.join:hover{
-	border-color: #DF7401;
-	border-style: inset;
-}
-.seek:hover{
-	border-color: #DF7401;
-	border-style: inset;
-}
 
 

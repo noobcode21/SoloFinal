@@ -21,7 +21,7 @@
 			
 			<div class="loginarea">
 			
-				<form action="/app/member/login" name="post" class="formarea">
+				<form action="/app/member/login" method="POST" class="formarea">
 					
 					<span class="idword">
 						아이디 
