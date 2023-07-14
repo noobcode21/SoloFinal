@@ -16,16 +16,16 @@
 		</div>
 		<div class="area2">
 			<div class="logoarea">
-				<img alt="logo" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="logoimg">
+				<a href="/app/main/screen">
+					<img alt="logo" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="logoimg">
+				</a>
 			</div>
 			
 			<div class="loginarea">
 			
 				<form action="/app/member/login" method="POST" class="formarea">
 					
-					<span class="idword">
-						아이디 
-					</span>
+					<span class="idword">아이디</span>
 					<span class="idarea">
 						<input type="text" name="id" class="idinput">
 					</span>
@@ -37,7 +37,7 @@
 					
 					<span></span>
 					<span class="submitarea">
-						<input type="submit" value="login" class="logininput">				
+						<input type="submit" value="로그인" class="logininput">				
 					</span>
 				</form>
 			</div>
@@ -45,8 +45,8 @@
 				<span class="joinareaword">계정이 기억나지 않으시거나 없으신가요?</span>
 			<div class="joinarea">
 				<div class="innerjoinarea">
-					<span class="join"> <a class="innerjoin" href="/">회원가입</a> </span>
-					<span class="seek"> <a class="innerseek" href="/">아이디/비밀번호 찾기</a> </span>
+					<span class="join"> <a class="innerjoin" href="/app/member/join">회원가입</a> </span>
+					<span class="seek"> <a class="innerseek" href="/app/main/findaccount">아이디 찾기/비밀번호 변경</a> </span>
 				</div>
 			</div>
 		</div>

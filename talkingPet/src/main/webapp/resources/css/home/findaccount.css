@@ -4,6 +4,11 @@ body {
 	background-color: orange;
 }
 
+a {
+  text-decoration-line: none;
+  color: orange;
+}
+
 body::-webkit-scrollbar {
 	width: 10px;
 }
@@ -17,11 +22,6 @@ body::-webkit-scrollbar-track {
 	background-color: grey;
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 5px white;
-}
-
-a {
-  text-decoration-line: none;
-  color: orange;
 }
 
 .bigback{
@@ -43,7 +43,7 @@ a {
 	background-color: #FFFAF0;
 	border-radius : 14px;
 	display: grid;
-	grid-template-rows: 2fr 2fr 1fr;	
+	grid-template-rows: 1fr 2fr ;	
 }
 
 .logoarea{
@@ -185,3 +185,76 @@ a {
 	border-color: #DF7401;
 	border-style: inset;
 }
+
+.findwhat{
+	display: grid;
+	grid-template-rows: 1fr 1fr;	
+	align-items: center;
+	justify-content: center;	
+}
+
+.findid{
+	display: grid;
+	grid-template-rows: 1fr 1fr;	
+	align-items: center;
+	justify-content: center;
+}
+.findpwd{
+	display: grid;
+	grid-template-rows: 1fr 1fr;	
+	align-items: center;
+	justify-content: center;
+}
+
+.findidlink{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 25px;
+	background-color: white; 
+	border-color: orange;
+	border-style: inset;
+}
+.findpwdlink{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 25px;
+	background-color: white; 
+	border-color: orange;
+	border-style: inset;
+}
+
+.findidlink:hover{
+	border-color: #DF7401;
+	border-style: inset;
+}
+.findpwdlink:hover{
+	border-color: #DF7401;
+	border-style: inset;
+}
+
+.findidword{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+.findpwdword{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+

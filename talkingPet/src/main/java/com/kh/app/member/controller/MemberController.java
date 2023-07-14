@@ -13,7 +13,7 @@ public class MemberController {
 	@GetMapping("join")
 	public String join() {
 		return "member/join";
-	}
+	}//get join
 	
 	@PostMapping("join")
 	public String join(String id, String pwd, String pwdconfirm, String nick, String email) {
@@ -53,6 +53,17 @@ public class MemberController {
 			return "redirect:/main/screen";			
 		}
 		
-	}
+	}//post login
+	
+	@GetMapping("findid")
+	public String findid() {
+		return "member/findid";
+	}//get findid
+	
+	@GetMapping("findpwd")
+	public String findpwd() {
+		return "member/findpwd";
+	}//get findpwd
+	
 	
 }
