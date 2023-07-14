@@ -128,36 +128,36 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: bold;
 	font-size: 20px;
+	font-weight: bold;
 }
 .pwdword{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: bold;
 	font-size: 20px;
+	font-weight: bold;
 }
 .emailword{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: bold;
 	font-size: 20px;
+	font-weight: bold;
 }
 .emailword{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: bold;
 	font-size: 20px;
+	font-weight: bold;
 }
 .pwdcheckword{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font: bold;
 	font-size: 15px;
+	font-weight: bold;
 }
 
 .idarea{

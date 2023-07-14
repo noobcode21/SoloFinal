@@ -43,7 +43,7 @@ a {
 	background-color: #FFFAF0;
 	border-radius : 14px;
 	display: grid;
-	grid-template-rows: 2fr 2fr 1fr;	
+	grid-template-rows: 1fr 2fr;	
 }
 
 .logoarea{
@@ -69,7 +69,7 @@ a {
 .formarea{
 	display: grid;
 	grid-template-columns : 2fr 5fr;
-	grid-template-rows : 1fr 1fr 1fr;
+	grid-template-rows : 1fr 1fr 1fr 1fr;
 	justify-content: center;
 	align-items: center;
 	padding: 15px;
@@ -127,13 +127,22 @@ a {
 }
 
 .idarea{
-	padding: 15px;	
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	padding-left: 15px;	
 }
 .pwdarea{
-	padding: 15px;	
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 .submitarea{
-	padding: 15px;	
+	padding-top: 40px;
+	padding-bottom: 35px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 .logoimg{
@@ -145,10 +154,10 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font: bold;
 	font-size: 18px;
 	width: 100%;
 	height: 50px;
-	font-weight: bold;
 }
 
 .join{
