@@ -16,7 +16,9 @@
 		</div>
 		<div class="area2">
 			<div class="logoarea">
-				<img alt="logo" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="logoimg">
+				<a href="/app/main/screen">
+					<img alt="logo" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="logoimg">
+				</a>
 			</div>
 			
 			<div class="joinarea">

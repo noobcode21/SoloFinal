@@ -11,9 +11,13 @@ public class MainScreenController {
 
 	@GetMapping("screen")
 	public String mainScreen() {
-		return "mainscreen";
+		return "main/screen";
 	}
 	
+	@GetMapping("findaccount")
+	public String findaccount() {
+		return "main/findaccount";
+	}
 	
 	
 	
