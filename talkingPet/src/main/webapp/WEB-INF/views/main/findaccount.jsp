@@ -30,7 +30,7 @@
 			
 				<div class="findpwd">
 					<span class="findpwdword">비밀번호를 잊으셨나요?</span>	
-					<a href="/app/member/findpwd" class="findpwdlink">비밀번호 찾기</a>		
+					<a href="/app/member/findpwd" class="findpwdlink">비밀번호 변경</a>		
 				</div>
 				
 			</div>

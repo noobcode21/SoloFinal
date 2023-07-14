@@ -65,5 +65,10 @@ public class MemberController {
 		return "member/findpwd";
 	}//get findpwd
 	
+	@GetMapping("changepwd")
+	public String changePwd() {
+		return "member/changepwd";
+	}//get changepwd
+	
 	
 }

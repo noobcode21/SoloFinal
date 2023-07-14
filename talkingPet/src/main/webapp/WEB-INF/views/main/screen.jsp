@@ -46,7 +46,7 @@
 			<div class="joinarea">
 				<div class="innerjoinarea">
 					<span class="join"> <a class="innerjoin" href="/app/member/join">회원가입</a> </span>
-					<span class="seek"> <a class="innerseek" href="/app/main/findaccount">아이디 찾기/비밀번호 변경</a> </span>
+					<span class="seek"> <a class="innerseek" href="/app/main/findaccount">아이디/비밀번호 찾기</a> </span>
 				</div>
 			</div>
 		</div>
