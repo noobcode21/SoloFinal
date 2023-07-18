@@ -70,5 +70,10 @@ public class MemberController {
 		return "member/changepwd";
 	}//get changepwd
 	
+	@GetMapping("yourid")
+	public String yourid() {
+		return "member/yourid";
+	}//get yourid
+	
 	
 }

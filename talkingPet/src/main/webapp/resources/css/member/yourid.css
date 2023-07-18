@@ -1,0 +1,213 @@
+@charset "UTF-8";
+
+body {
+	background-color: orange;
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+	background-color: #2f3542;
+	border-radius: 10px;
+	background-clip: padding-box;
+	border: 2px solid transparent;
+}
+body::-webkit-scrollbar-track {
+	background-color: grey;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}
+
+a {
+  text-decoration-line: none;
+  color: orange;
+}
+
+.bigback{
+	padding: none;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+
+.area1{
+	width: 100%;
+	height: 1080px;	
+	overflow: hidden;
+	border-radius : 14px; 
+}
+
+.area2{
+	width: 100%;
+	height: 1080px;	
+	background-color: #FFFAF0;
+	border-radius : 14px;
+	display: grid;
+	grid-template-rows: 1fr 2fr;	
+}
+
+.logoarea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loginarea{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.joinarea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.submitarea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.formarea{
+	display: grid;
+	grid-template-columns : 2fr 5fr;
+	grid-template-rows : 1fr 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+.innerjoinarea{
+	display: grid;
+	grid-template-columns : 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	width: 100%;
+	height: 300px;
+}
+
+.idinput{
+	width: 225px;
+	height: 25px;	
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+.pwdinput{
+	width: 225px;
+	height: 25px;
+	border-radius: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 5px;
+}
+.logininput{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	width: 175px;
+	height: 25px;
+	border-radius: 15px;
+}
+
+.idword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.pwdword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.idarea{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	padding-left: 15px;	
+}
+.pwdarea{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.submitarea{
+	padding-top: 40px;
+	padding-bottom: 35px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.logoimg{
+	width: 400px;
+	height: 400px;
+}
+
+.joinareaword{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font: bold;
+	font-size: 18px;
+	width: 100%;
+	height: 50px;
+}
+
+.join{
+	color: orange;
+	margin-bottom: 250px;
+	width: 90%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 25px;
+	background-color: white; 
+	border-color: orange;
+	border-style: inset;
+}
+.seek{
+	color: orange;
+	margin-bottom: 250px;
+	width: 90%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	border-radius: 25px;
+	background-color: white; 
+	border-color: orange;
+	border-style: inset;
+}
+.join:hover{
+	border-color: #DF7401;
+	border-style: inset;
+}
+.seek:hover{
+	border-color: #DF7401;
+	border-style: inset;
+}
+
+.resultarea{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+.innerresult{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 25px;
+	border-radius: 15px;
+	background-color: white; 
+}
