@@ -19,6 +19,10 @@ public class MainScreenController {
 		return "main/findaccount";
 	}
 	
+	@GetMapping("home")
+	public String home() {
+		return "main/home";
+	}
 	
 	
 	
