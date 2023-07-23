@@ -26,7 +26,9 @@
         <div class="v79_55"></div><span class="v79_56">마이페이지</span><span class="v79_57">로그아웃</span><span
             class="v79_58">공지사항</span><span class="v79_59">자유게시판</span><span class="v79_60">펫 스토어</span><span
             class="v79_61">더 보기</span>
-       	<img alt="" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="v79_62">
+        <a href="/app/main/home">
+	       	<img alt="" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="v79_62">
+        </a>
         <div class="v79_63"></div>
         <div class="v79_65"></div>
 		<img alt="" src="${pageContext.request.contextPath}/resources/img/search/v79_43.png" class="v79_43">

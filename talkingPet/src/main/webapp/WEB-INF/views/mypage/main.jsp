@@ -41,7 +41,9 @@
         <div class="v80_11"></div><span class="v80_12">마이페이지</span><span class="v80_13">로그아웃</span><span
             class="v80_14">공지사항</span><span class="v80_15">자유게시판</span><span class="v80_16">펫 스토어</span><span
             class="v80_17">더 보기</span>
-		<img alt="" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="v80_18">
+	        <a href="/app/main/home">
+			<img alt="" src="${pageContext.request.contextPath}/resources/img/pageimg/logo.png" class="v80_18">
+	        </a>
     </div>
 </body>
 
