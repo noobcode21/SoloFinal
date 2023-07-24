@@ -13,4 +13,10 @@ public class BoardController {
 		return "board/list";
 	}
 	
+	@GetMapping("write")
+	public String boardWrite() {
+		return "board/write";
+	}
+	
+	
 }
