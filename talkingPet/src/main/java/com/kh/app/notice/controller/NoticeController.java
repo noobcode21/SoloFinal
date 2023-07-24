@@ -13,4 +13,9 @@ public class NoticeController {
 		return "notice/list";
 	}
 	
+	@GetMapping("write")
+	public String noticeWrite() {
+		return "notice/write";
+	}
+	
 }
