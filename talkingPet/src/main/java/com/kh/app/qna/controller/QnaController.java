@@ -9,8 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class QnaController {
 
 	@GetMapping("list")
-	public String QnaList() {
+	public String qnaList() {
 		return "qna/list";
 	}
+	
+	@GetMapping("write")
+	public String qnaWrite() {
+		return "qna/write";
+	}
+	
 	
 }

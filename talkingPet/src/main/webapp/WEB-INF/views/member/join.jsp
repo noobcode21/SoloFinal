@@ -34,12 +34,12 @@
 					<span class="pwdarea">
 						<input type="password" name="pwd" class="pwdinput">					
 					</span>
-
+					
 					<span class="pwdcheckword">비밀번호 확인</span>
 					<span class="pwdcheckarea">
 						<input type="password" name="pwdconfirm" class="checkpwd">					
 					</span>
-
+					
 					<span class="emailword">닉네임</span>
 					<span class="emailarea">
 						<input type="text" name="nick" class="emailinput">					
@@ -49,7 +49,7 @@
 					<span class="emailarea">
 						<input type="text" name="email" class="emailinput">					
 					</span>
-
+					
 					<span></span>
 					<span class="submitarea">
 						<input type="submit" onclick="confirm()" value="가입" class="confirmjoin">					
@@ -78,7 +78,7 @@ function confirm() {
 	console.log(pwd);
 	console.log(pwdconfirm);
 	console.log(email);
-
+	
 	console.log(id.length);
 	console.log(pwd.length);
 	console.log(pwdconfirm.length);
