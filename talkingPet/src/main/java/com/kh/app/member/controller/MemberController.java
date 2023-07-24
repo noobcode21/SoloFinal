@@ -53,7 +53,7 @@ public class MemberController {
 			return "redirect:/main/screen";			
 		}
 		
-	}//post login
+	}//post login 조건 후 else에서 기능 작동 구현 요망
 	
 	@GetMapping("findid")
 	public String findid() {
