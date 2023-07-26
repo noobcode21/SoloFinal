@@ -27,12 +27,12 @@
 					
 					<span class="idword">아이디</span>
 					<span class="idarea">
-						<input type="text" name="id" class="idinput">
+						<input type="text" name="memberId" class="idinput">
 					</span>
 					
 					<span class="pwdword">비밀번호</span>
 					<span class="pwdarea">
-						<input type="password" name="pwd" class="pwdinput">					
+						<input type="password" name="memberPwd" class="pwdinput">					
 					</span>
 					
 					<span></span>

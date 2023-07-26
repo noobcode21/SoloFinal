@@ -27,7 +27,7 @@
 					
 					<span class="idword">비밀번호</span>
 					<span class="idarea">
-						<input type="password" name="pwd" class="idinput">
+						<input type="password" name="memberPwd" class="idinput">
 					</span>
 					
 					<span class="pwdword">비밀번호 확인</span>
