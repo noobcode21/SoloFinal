@@ -27,7 +27,7 @@
 					
 					<span class="idword">닉네임</span>
 					<span class="idarea">
-						<input type="text" name="nick" class="idinput">
+						<input type="text" name="memberNick" class="idinput">
 					</span>
 					
 					<span class="pwdword">이메일</span>

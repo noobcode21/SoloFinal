@@ -27,12 +27,12 @@
 					
 					<span class="idword">아이디</span>
 					<span class="idarea">
-						<input type="text" name="id" class="idinput">
+						<input type="text" name="memberId" class="idinput">
 					</span>
 					
 					<span class="idword">닉네임</span>
 					<span class="idarea">
-						<input type="text" name="nick" class="idinput">
+						<input type="text" name="memberNick" class="idinput">
 					</span>
 					
 					<span class="pwdword">이메일</span>

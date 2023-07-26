@@ -27,12 +27,12 @@
 					
 					<span class="idword">아이디</span>
 					<span class="idarea">
-						<input type="text" name="id" class="idinput">
+						<input type="text" name="memberId" class="idinput">
 					</span>
 					
 					<span class="pwdword">비밀번호</span>
 					<span class="pwdarea">
-						<input type="password" name="pwd" class="pwdinput">					
+						<input type="password" name="memberPwd" class="pwdinput">					
 					</span>
 					
 					<span class="pwdcheckword">비밀번호 확인</span>
@@ -42,7 +42,7 @@
 					
 					<span class="emailword">닉네임</span>
 					<span class="emailarea">
-						<input type="text" name="nick" class="emailinput">					
+						<input type="text" name="memberNick" class="emailinput">					
 					</span>
 
 					<span class="emailword">이메일</span>
@@ -68,10 +68,10 @@
 
 function confirm() {
 	
-	var id = document.querySelector('input[name=id]').value;
-	var pwd = document.querySelector('input[name=pwd]').value;
+	var id = document.querySelector('input[name=memberId]').value;
+	var pwd = document.querySelector('input[name=memberPwd]').value;
 	var pwdconfirm = document.querySelector('input[name=pwdconfirm]').value;
-	var nick = document.querySelector('input[name=nick]').value;
+	var nick = document.querySelector('input[name=memberNick]').value;
 	var email = document.querySelector('input[name=email]').value;
     
 	console.log(id);

@@ -16,31 +16,31 @@ public class MemberController {
 	}//get join
 	
 	@PostMapping("join")
-	public String join(String id, String pwd, String pwdconfirm, String nick, String email) {
+	public String join(String memberId, String memberPwd, String pwdconfirm, String memberNick, String email) {
 	
-		System.out.println("id : " + id);
-		System.out.println("pwd : " + pwd);
+		System.out.println("id : " + memberId);
+		System.out.println("pwd : " + memberPwd);
 		System.out.println("pwdconfirm : " + pwdconfirm);
-		System.out.println("nick : " + nick);
+		System.out.println("nick : " + memberNick);
 		System.out.println("email : " + email);
 		
-		if(id == null) {
+		if(memberId == null) {
 			System.out.println("아이디 값 없음");
 			return "member/join";
 		}
-		else if(id.length() < 6) {
+		else if(memberId.length() < 6) {
 			System.out.println("아이디 6 자리 이상 안됨");
 			return "member/join";
 		}
-		else if(pwd.length() < 6) {
+		else if(memberPwd.length() < 6) {
 			System.out.println("비밀번호 6자리 이상 안됨");
 			return "member/join";
 		}
-		else if(!pwd.equals(pwdconfirm)) {
+		else if(!memberPwd.equals(pwdconfirm)) {
 			System.out.println("비밀번호 확인 매치가 안됨");
 			return "member/join";
 		}
-		else if(nick.length() < 2 || nick.length() > 10) {
+		else if(memberNick.length() < 2 || memberNick.length() > 10) {
 			System.out.println("닉네임 짧거나 너무 김");
 			return "member/join";
 		}
