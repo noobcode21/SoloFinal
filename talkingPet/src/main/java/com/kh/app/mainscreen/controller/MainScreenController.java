@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.kh.app.member.vo.MemberVo;
+
+import oracle.jdbc.proxy.annotation.Post;
+
 @Controller
 @RequestMapping("main")
 public class MainScreenController {

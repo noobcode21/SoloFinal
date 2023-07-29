@@ -23,7 +23,7 @@
 			
 			<div class="joinarea">
 			
-				<form action="/app/member/join" method="POST" class="formarea">
+				<form action="/app/member/join" method="POST" class="formarea" onsubmit="return confirm();">
 					
 					<span class="idword">아이디</span>
 					<span class="idarea">
@@ -52,7 +52,7 @@
 					
 					<span></span>
 					<span class="submitarea">
-						<input type="submit" onclick="confirm()" value="가입" class="confirmjoin">					
+						<input type="submit" value="가입" class="confirminput">					
 					</span>
 					
 				</form>

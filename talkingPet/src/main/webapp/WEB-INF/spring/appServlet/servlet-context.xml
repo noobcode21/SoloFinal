@@ -35,5 +35,9 @@
 		<beans:property name="maxUploadSizePerFile" value="5000000"></beans:property>		
 	</beans:bean>
 	
+	<!-- 암호화 -->
+	<beans:bean class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+	
+	</beans:bean>
 	
 </beans:beans>
