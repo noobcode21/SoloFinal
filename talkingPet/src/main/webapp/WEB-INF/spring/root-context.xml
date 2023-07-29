@@ -28,7 +28,7 @@
 	<bean id="bds" class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
 		<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
-		<property name="username" value="C##FINAL"/>
+		<property name="username" value="C##SOLOFINAL"/>
 		<property name="password" value="1234"/>
 	</bean>
 
@@ -41,8 +41,14 @@
 	<aop:aspectj-autoproxy/>
 
 	<!-- @Aspect 어노테이션도 scan 하기 위함 -->
-	<context:component-scan base-package="com.kh.app">
+	<context:component-scan base-package="com.kh.app" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.aspectj.lang.annotation.Aspect"/>
 	</context:component-scan>
-		
+	
+	<!-- 필터 요청 객체 등록 -->
+	<bean name="abc" class="org.springframework.web.filter.CharacterEncodingFilter">
+		<property name="encoding" value="UTF-8"/>
+	</bean>
+	
+	
 </beans>
