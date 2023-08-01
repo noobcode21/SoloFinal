@@ -104,7 +104,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("findid")
-	public String findid() {
+	public String findidform() {
 		return "member/findid";
 	}//get findid
 	
@@ -126,7 +126,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("findpwd")
-	public String findPwd() {
+	public String findPwdform() {
 		return "member/findpwd";
 	}//get findpwd
 	
@@ -146,7 +146,7 @@ public class MemberController {
 	}
 	
 	@GetMapping("changepwd")
-	public String changePwd() {
+	public String changePwdform() {
 		return "member/changepwd";
 	}//get changepwd
 	
@@ -171,11 +171,9 @@ public class MemberController {
 		
 		if(memberPwd.length() < 6) {
 			log.info("비밀번호 6자리 이상 안됨");
-			return "member/join";
 		}
 		else if(!memberPwd.equals(confirmpwd)) {
 			log.info("비밀번호 확인 매치가 안됨");
-			return "member/join";
 		}
 		else {
 			
@@ -187,9 +185,9 @@ public class MemberController {
 				throw new IllegalStateException("change password failed");
 			}
 			
-			return "main/screen";
-			
 		}
+		
+		return "main/screen";
 		
 	}
 	

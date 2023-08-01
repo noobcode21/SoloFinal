@@ -53,4 +53,18 @@
 	</div>
 
 </body>
+
+<script>
+	var memberNick = "${loginmember.memberNick}";
+	var errorMsg = "${errorMsg}";
+	
+	if (memberNick !== "") {
+	    alert(memberNick + "님 환영합니다.");
+	}
+	
+	if (errorMsg !== "") {
+	    alert(errorMsg);
+	}
+</script>
+
 </html>
