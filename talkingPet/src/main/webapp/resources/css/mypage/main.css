@@ -115,7 +115,6 @@ body::-webkit-scrollbar-track {
 .v16_80 {
   width: 120px;
   height: 124px;
-  background: url("../images/v16_80.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -246,19 +245,7 @@ body::-webkit-scrollbar-track {
   opacity: 1;
   text-align: center;
 }
-.v16_105 {
-  width: 142px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 818px;
-  left: 615px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Inter;
-  font-weight: Bold;
-  font-size: 26px;
-  opacity: 1;
-  text-align: center;
-}
+
 .v16_90 {
   width: 142px;
   color: rgba(0,0,0,1);
@@ -397,7 +384,6 @@ body::-webkit-scrollbar-track {
 .v16_98 {
   width: 150px;
   height: 143px;
-  background: url("../images/v16_98.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -666,7 +652,6 @@ body::-webkit-scrollbar-track {
 .v80_18 {
   width: 189px;
   height: 172px;
-  background: url("../images/v80_18.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
