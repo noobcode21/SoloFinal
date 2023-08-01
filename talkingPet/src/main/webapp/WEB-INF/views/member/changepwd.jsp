@@ -23,7 +23,7 @@
 			
 			<div class="loginarea">
 				
-				<form action="/app/member/changepwd" method="POST" class="formarea">
+				<form action="/app/member/changepwd" method="POST" class="formarea" onsubmit="return confirm();">
 					
 					<span class="idword">비밀번호</span>
 					<span class="idarea">
@@ -47,4 +47,32 @@
 	</div>
 
 </body>
+
+<script type="text/javascript">
+
+function confirm() {
+	
+	var memberPwd = document.querySelector('input[name=memberPwd]').value;
+	var confirmpwd = document.querySelector('input[name=confirmpwd]').value;
+    
+	console.log(memberPwd);
+	console.log(confirmpwd);
+	    
+	if(memberPwd.length < 6) {
+		alert('입력한 비밀번호가 6글자 이상이어야 합니다.');
+		return false;
+	}
+	
+	if(memberPwd != confirmpwd) {
+		alert("비밀번호가 일치하지 않습니다.");
+		return false;
+	}
+
+
+	alert('비밀번호 변경 신청 성공');
+	return true;
+	
+}
+</script>
+
 </html>

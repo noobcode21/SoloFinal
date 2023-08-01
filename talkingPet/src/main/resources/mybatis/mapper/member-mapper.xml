@@ -28,6 +28,35 @@
 		WHERE MEMBER_ID = #{memberId}
 	</select>
 
+	<select id="findid" resultType="MemberVo">
+		SELECT 
+			MEMBER_NO,
+			MEMBER_ID,
+			MEMBER_PWD,
+			MEMBER_NICK,
+			STATUS,
+			JOIN_DATE,
+			EMAIL,
+			MODIFY_DATE,
+			PROFILE
+		 FROM MEMBER 
+		 WHERE MEMBER_NICK = #{memberNick} AND EMAIL = #{email} 
+	</select>
 
+	<select id="findpwd" resultType="MemberVo">
+		SELECT 
+			MEMBER_ID,
+			MEMBER_NICK,
+			EMAIL
+		 FROM MEMBER 
+		 WHERE MEMBER_ID = #{memberId} AND MEMBER_NICK = #{memberNick} AND EMAIL = #{email} 
+	</select>
+
+	<update id="changepwd">	
+		UPDATE MEMBER 
+		SET MEMBER_PWD = #{memberPwd} 
+		WHERE MEMBER_ID = #{memberId} AND MEMBER_NICK = #{memberNick} AND EMAIL = #{email}
+	</update>
+	
 
 </mapper>

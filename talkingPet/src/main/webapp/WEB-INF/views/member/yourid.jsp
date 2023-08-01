@@ -24,6 +24,10 @@
 			<div class="resultarea">
 				<div class="innerresult">
 					
+					<div>당신의 아이디는</div>
+					<div>${ findid.memberId }</div>
+					<div>입니다.</div>
+					
 				</div>
 			</div>
 			

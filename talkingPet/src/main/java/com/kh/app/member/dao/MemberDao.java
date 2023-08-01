@@ -19,6 +19,18 @@ public class MemberDao {
 	public MemberVo login(SqlSessionTemplate sst, MemberVo vo) {
 		return sst.selectOne("member.login", vo);
 	}
+
+	public MemberVo findId(SqlSessionTemplate sst, MemberVo vo) {
+		return sst.selectOne("member.findid", vo);
+	}
+
+	public MemberVo findPwd(SqlSessionTemplate sst, MemberVo vo) {
+		return sst.selectOne("member.findpwd", vo);
+	}
+
+	public int changePwd(SqlSessionTemplate sst, MemberVo vo) {
+		return sst.update("member.changepwd", vo);
+	}
 	
 	
 	

@@ -109,7 +109,7 @@ function confirm() {
 		return false;
 	}
 
-	alert('회원가입 성공');
+	alert('회원 가입 신청 성공');
 	return true;
 	
 }

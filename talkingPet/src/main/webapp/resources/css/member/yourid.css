@@ -204,10 +204,14 @@ a {
 .innerresult{
 	width: 100%;
 	height: 100%;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 25px;
 	border-radius: 15px;
 	background-color: white; 
+	display: grid;
+	grid-template-rows : 1fr 2fr 1fr;
+	font-size: 26px;
+	font-weight: bold;
+	text-align: center;
 }

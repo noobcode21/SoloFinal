@@ -42,6 +42,32 @@ public class MemberService {
 		}
 		return loginMember;
 	}
+
+	public MemberVo findId(MemberVo vo) {
+		
+		MemberVo findid = dao.findId(sst, vo);
+		
+		return findid;
+		
+	}
+
+	public MemberVo findPwd(MemberVo vo) {
+		
+		MemberVo findPwd = dao.findPwd(sst, vo);
+		
+		return findPwd;
+		
+	}
+
+	public int changePwd(MemberVo vo) {
+		
+		String memberPwd = vo.getMemberPwd();
+		String newMemberPwd = pwdEncoder.encode(memberPwd);
+		vo.setMemberPwd(newMemberPwd);
+		
+		return dao.changePwd(sst, vo);
+		
+	}
 	
 	
 	

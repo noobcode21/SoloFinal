@@ -1,5 +1,10 @@
 package com.kh.app.member.controller;
 
+import java.io.IOException;
+import java.net.http.HttpRequest;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.aspectj.lang.annotation.Pointcut;
@@ -8,12 +13,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttribute;
+import org.springframework.web.bind.support.SessionStatus;
 
 import com.kh.app.member.service.MemberService;
 import com.kh.app.member.vo.MemberVo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import oracle.jdbc.proxy.annotation.Post;
 
 @Slf4j
 @Controller
@@ -101,15 +108,90 @@ public class MemberController {
 		return "member/findid";
 	}//get findid
 	
+	@PostMapping("findid")
+	public String findid(MemberVo vo, HttpServletRequest req) throws Exception {
+		
+		MemberVo findid = ms.findId(vo);
+		
+		log.info("id : " + findid);
+		
+		if(findid == null) {
+			throw new IllegalStateException("id isn't exist");
+		}
+
+		req.setAttribute("findid", findid);
+		
+		return "member/yourid";
+		
+	}
+	
 	@GetMapping("findpwd")
-	public String findpwd() {
+	public String findPwd() {
 		return "member/findpwd";
 	}//get findpwd
+	
+	@PostMapping("findpwd")
+	public String findPwd(MemberVo vo, HttpSession session) {
+		
+		MemberVo findPwd = ms.findPwd(vo);
+		
+		if(findPwd == null) {
+			throw new IllegalStateException("account not founded");
+		}
+		
+		session.setAttribute("findPwd", findPwd);
+		
+		return "redirect:/member/changepwd";
+		
+	}
 	
 	@GetMapping("changepwd")
 	public String changePwd() {
 		return "member/changepwd";
 	}//get changepwd
+	
+	@PostMapping("changepwd")
+	public String changePwd(String memberPwd, String confirmpwd, HttpSession session) {
+		
+		MemberVo findPwd = (MemberVo) session.getAttribute("findPwd");
+		String memberId = findPwd.getMemberId();
+		String memberNick = findPwd.getMemberNick();
+		String email = findPwd.getEmail();
+		
+		log.info(memberId);
+		log.info(memberPwd);
+		log.info(memberNick);
+		log.info(email);		
+		
+		MemberVo vo = new MemberVo();
+		vo.setMemberId(memberId);
+		vo.setMemberPwd(memberPwd);
+		vo.setMemberNick(memberNick);
+		vo.setEmail(email);
+		
+		if(memberPwd.length() < 6) {
+			log.info("비밀번호 6자리 이상 안됨");
+			return "member/join";
+		}
+		else if(!memberPwd.equals(confirmpwd)) {
+			log.info("비밀번호 확인 매치가 안됨");
+			return "member/join";
+		}
+		else {
+			
+			int result = ms.changePwd(vo);
+			
+			log.info("changePwd result : " + result);
+			
+			if(result != 1) {
+				throw new IllegalStateException("change password failed");
+			}
+			
+			return "main/screen";
+			
+		}
+		
+	}
 	
 	@GetMapping("yourid")
 	public String yourid() {
