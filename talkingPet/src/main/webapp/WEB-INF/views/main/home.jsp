@@ -19,14 +19,18 @@
         <div class="v11_181"></div>
         <div class="v11_182"></div>
         <div class="v11_183"></div>
-        <div class="v11_184"></div>
+        <form class="v11_184" method="post" action="/app/search/result">
+        	<input type="text" name="petInfoTitle" class="searchtarget">
+        	<input type="submit" value="검색하기" class="search">
+        </form>
         <div class="v11_185"></div>
         <div class="v13_258"></div>
-        <div class="v13_262"></div>
         <div class="v11_186"></div>
         <div class="v11_187"></div><span class="v11_188">마이페이지</span><span class="v11_189">로그아웃</span><span
-            class="v11_190">공지사항</span><span class="v13_259">정보 검색하기</span><span class="v11_191">자유게시판</span><span
-            class="v11_192">펫 스토어</span><span class="v11_193">더 보기</span>
+            class="v11_190">공지사항</span>
+            <span class="v11_191">자유게시판</span>
+            <span class="v11_192">펫 스토어</span>
+            <span class="v11_193">더 보기</span>
         <a href=""><img alt="" src="${pageContext.request.contextPath}/resources/img/main/v11_194.png" class="v11_194"></a>
         <div class="v11_195"></div>
         <div class="v11_202"></div>
