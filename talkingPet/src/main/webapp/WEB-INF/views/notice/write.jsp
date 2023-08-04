@@ -13,11 +13,11 @@
     <div class="v99_2">
         <div class="v89_985"></div>
         <form class="v91_6" method="post" action="/app/notice/write" enctype="multipart/form-data">
-            <input type="text" name="title" class="titlearea" placeholder="제목을 작성해주세요">
+            <input type="text" name="noticeTitle" class="titlearea" placeholder="제목을 작성해주세요">
             <br>
             <br>
             <br>
-            <textarea name="content" class="contentarea" placeholder="내용을 작성해주세요"></textarea>
+            <textarea name="noticeContent" class="contentarea" placeholder="내용을 작성해주세요"></textarea>
             <br>
             <input type="file" value="파일첨부" class="inputfile">
             <input type="submit" value="작성하기" class="write">

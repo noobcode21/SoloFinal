@@ -990,5 +990,6 @@ body::-webkit-scrollbar-track {
 }
 .search:hover{
 	cursor: pointer;
+	background-color: orange;
 }
 
