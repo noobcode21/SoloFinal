@@ -13,6 +13,7 @@
     <div class="v92_12">
         <table class="v91_4">
             <tr>
+                <th class="number">글 번호</th>
                 <th class="writer">작성자</th>
                 <th class="title">제목</th>
                 <th class="enrolldate">작성일</th>
@@ -20,9 +21,10 @@
             </tr>
 			<c:forEach items="${bList}" var="bList">
 	            <tr>
+	                <th>${bList.boardNo}</th>
 	                <th>${bList.memberNick}</th>
 	                <th>${bList.boardTitle}</th>
-	                <th>${bList.enrollDate }</th>
+	                <th>${bList.enrollDate}</th>
 	                <th>${bList.hit }</th>
 	            </tr>			
 			</c:forEach>
