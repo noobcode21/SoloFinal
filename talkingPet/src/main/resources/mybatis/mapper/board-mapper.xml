@@ -15,5 +15,33 @@
 	
 	</insert>	
 	
+	<select id="boardListCount" resultType="int">
+	
+		SELECT COUNT(*) FROM BOARD WHERE STATUS = 'O'
+	
+	</select>
+	
+	<select id="getBoardList" resultType="BoardVo">
+		
+		SELECT * 
+		FROM ( 
+		SELECT ROWNUM RNUM, T.* 
+		FROM ( SELECT 
+		B.BOARD_NO, 
+		B.BOARD_CATEGORY_NO,
+		B.MEMBER_NO,
+		B.BOARD_TITLE,
+		B.BOARD_CONTENT,
+		B.ENROLL_DATE,
+		B.MODIFY_DATE,
+		B.STATUS,
+		B.HIT,
+		M.MEMBER_NICK 
+		FROM BOARD B
+		JOIN MEMBER M ON (B.MEMBER_NO = M.MEMBER_NO) WHERE B.STATUS = 'O' 
+		ORDER BY B.BOARD_NO DESC ) T )
+		WHERE RNUM BETWEEN #{beginRow} AND #{lastRow}
+		
+	</select>
 
 </mapper>

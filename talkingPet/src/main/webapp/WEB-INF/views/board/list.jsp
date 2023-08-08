@@ -18,91 +18,40 @@
                 <th class="enrolldate">작성일</th>
                 <th class="hit">조회수</th>
             </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-            <tr>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-                <th>123</th>
-            </tr>
-
+			<c:forEach items="${bList}" var="bList">
+	            <tr>
+	                <th>${bList.memberNick}</th>
+	                <th>${bList.boardTitle}</th>
+	                <th>${bList.enrollDate }</th>
+	                <th>${bList.hit }</th>
+	            </tr>			
+			</c:forEach>
         </table>
         <div class="v91_5">
             <div class="page_wrap">
                 <div class="page_nation">
-                   <a class="arrow pprev" href="#"></a>
-                   <a class="arrow prev" href="#"></a>
-                   <a href="#" class="active">1</a>
-                   <a href="#">2</a>
-                   <a href="#">3</a>
-                   <a href="#">4</a>
-                   <a href="#">5</a>
-                   <a href="#">6</a>
-                   <a href="#">7</a>
-                   <a href="#">8</a>
-                   <a href="#">9</a>
-                   <a href="#">10</a>
-                   <a class="arrow next" href="#"></a>
-                   <a class="arrow nnext" href="#"></a>
+                <c:if test="${pv.currentPage > 1}">
+					<a href="${pageContext.request.contextPath}/board/list?page=${pv.currentPage-1}">
+						<button style="width: 100%; height: 100%; font-size: 20px;"><</button>
+					</a>
+				</c:if>
+				<c:forEach begin="${pv.startPage}" end="${pv.endPage}" var="num">
+					<c:if test="${pv.currentPage ne num}">
+						<a href="${pageContext.request.contextPath}/board/list?page=${num}">
+							<button style="width: 100%; height: 100%; font-size: 20px;">${num}</button>
+						</a>
+					</c:if>
+					<c:if test="${pv.currentPage eq num}">
+						<a>
+							<button class="active" style="width: 100%; height: 100%; font-size: 20px;">${num}</button>
+						</a>
+					</c:if>
+				</c:forEach>
+				<c:if test="${pv.currentPage < pv.maxPage}">
+					<a href="${pageContext.request.contextPath}/board/list?page=${pv.currentPage+1}">
+						<button style="width: 100%; height: 100%; font-size: 20px;">></button>
+					</a>
+				</c:if>
                 </div>
              </div>
         </div>
