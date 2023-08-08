@@ -25,7 +25,7 @@
 	                <th>${bList.memberNick}</th>
 	                <th>${bList.boardTitle}</th>
 	                <th>${bList.enrollDate}</th>
-	                <th>${bList.hit }</th>
+	                <th>${bList.hit}</th>
 	            </tr>			
 			</c:forEach>
         </table>
