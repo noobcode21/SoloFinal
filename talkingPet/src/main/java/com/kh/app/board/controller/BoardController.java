@@ -32,7 +32,7 @@ public class BoardController {
 	public String boardList(@RequestParam(defaultValue = "1") int page, Model model) {
 		
 		int count = bs.boardListCnt();
-		PageVo pv = new PageVo(count, page, 5, 10);
+		PageVo pv = new PageVo(count, page, 10, 10);
 		
 		List<BoardVo> bList = bs.getBoardList(pv);
 		
