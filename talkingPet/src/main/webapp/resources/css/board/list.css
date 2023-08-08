@@ -56,8 +56,11 @@ ul li{
 	color:#fff;
 	border:1px solid #42454c;
 }
+.number{
+  width: 100px;
+}
 .writer{
-  width: 200px;
+  width: 150px;
 }
 .title{
   width: 550px;
