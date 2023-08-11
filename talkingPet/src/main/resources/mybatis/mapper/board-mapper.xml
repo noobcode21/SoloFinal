@@ -43,5 +43,47 @@
 		WHERE RNUM BETWEEN #{beginRow} AND #{lastRow}
 		
 	</select>
+	
+	<select id="boardDetail" resultType="BoardVo">
+		
+		SELECT 
+		BOARD_NO,
+		MEMBER_NO,
+		BOARD_CATEGORY_NO,
+		BOARD_TITLE,
+		BOARD_CONTENT,
+		ENROLL_DATE,
+		MODIFY_DATE,
+		STATUS,
+		HIT
+		FROM BOARD 
+		WHERE BOARD_NO = #{boardNo} AND STATUS = 'O'
+		
+	</select>
+	
+	<update id="increaseHit">
+		
+		UPDATE BOARD SET HIT = HIT + 1 WHERE BOARD_NO = #{boardNo}
+		
+	</update>
+	
+	<update id="updateBoard">
+		
+		UPDATE BOARD 
+		SET 
+		BOARD_TITLE = #{boardTitle},
+		BOARD_CONTENT = #{boardContent},
+		MODIFY_DATE = SYSDATE 
+		WHERE BOARD_NO = #{boardNo};	
+		
+	</update>
+	
+	<update id="deleteBoard">
+		
+		UPDATE BOARD
+		SET STATUS = 'X'
+		WHERE BOARD_NO = #{boardNo}
+		
+	</update>
 
 </mapper>

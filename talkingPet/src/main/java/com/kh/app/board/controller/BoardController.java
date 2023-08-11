@@ -16,6 +16,7 @@ import com.kh.app.board.service.BoardService;
 import com.kh.app.board.vo.BoardVo;
 import com.kh.app.member.vo.MemberVo;
 import com.kh.app.page.vo.PageVo;
+import com.kh.app.reply.vo.ReplyVo;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -65,6 +66,54 @@ public class BoardController {
 		}
 		
 		return "redirect:/board/list";
+		
+	}
+	
+	@RequestMapping("detail")
+	public String BoardDetail(int boardNo, Model model) {
+		
+		BoardVo bvo = bs.BoardDetail(boardNo);
+		List<ReplyVo> rvo = bs.replyList(boardNo); 
+		
+		if(bvo == null) {
+			throw new IllegalStateException("board detail result is null..");
+		}
+		
+		model.addAttribute("bvo", bvo);
+		model.addAttribute("rvo", rvo);
+		
+		return "board/detail";
+		
+	}
+	
+	@GetMapping("update")
+	public String UpdateBoard() {
+		return "board/update";
+	}
+	
+	@PostMapping
+	public String UpdateBoard(BoardVo BoardVo) {
+		
+		int result = bs.UpdateBoard(BoardVo);
+		
+		if(result != 1) {
+			throw new IllegalStateException("update board Failed");
+		}
+		
+		return "board/list";
+		
+	}
+	
+	@RequestMapping("delete")
+	public String DeleteBoard(int boardNo) {
+		
+		int result = bs.DeleteBoard(boardNo);
+		
+		if(result != 1) {
+			throw new IllegalStateException("board delete failed");
+		}
+		
+		return "board/list";
 		
 	}
 	
